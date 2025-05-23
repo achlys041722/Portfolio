@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif, 'Abolition';
+  line-height: 1.6;
+  padding: 20px;
+  background: 
+    linear-gradient(to bottom, black 0%, blue 30%, purple 70%, black 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 100%;
+  color: #fff; /* white text looks better on dark background */
+  min-height: 100vh;
+}
+
+div {
+  background: rgba(255, 255, 255, 0.1); /* translucent white */
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 0 10px rgba(0, 0, 255, 0.7),
+    0 0 20px rgba(138, 43, 226, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: box-shadow 0.3s ease;
+}
+
+
+/* Home Area */
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0); /* transparent background */
+  padding: 0 2rem;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar li a {
+    padding-right: 1rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #ffd700;
+}
+
+
+#home {
+  position: relative;
+  height: 90%;
+  max-width: 96vw;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.photo-container {
+  position: relative;
+  top: 3.5rem;
+  left: 45rem;
+}
+.photo {
+  width: 28rem;
+  height: 28rem;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 1400% 1400%; /* large size for smooth animation */
+  animation: gradientMove 20s ease infinite;
+  position: relative;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.747); /* soft glow */
+  z-index: 1;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  background-color: white;
+  padding: 4px;
+  box-sizing: border-box;
+}
+/* Keyframes for moving gradient */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+h1 {
+  position: relative;
+  bottom: 24rem;
+  font-size: 4.5rem;
+  left: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+p.intro{
+    position: relative;
+    bottom: 23rem;
+    font-size: 2rem;
+    left: 15rem;
+    font-family: Poppins, sans-serif;
+    text-shadow: 0 0 10px rgba(113, 113, 253, 0.849);
+}
+p.tagline{
+    position: relative;
+    bottom: 22rem;
+    font-size: 1rem;
+    left: 24.8rem;
+    font-family: sans-serif;
+    font-style: italic;
+    text-shadow: 0 0 10px rgba(113, 113, 253, 0.849);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typewriter 3s steps(60) 0s infinite alternate,
+                blink 0.5s step-end infinite;
+}
+/* Typing effect */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30ch; /* Adjust based on your text length */
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+p.location{
+    position: relative;
+    bottom: 7rem;
+    font-size: 1rem;
+    left: 60rem;
+    font-family: sans-serif;
+    text-shadow: 0 0 10px rgba(113, 113, 253, 0.849);
+}
+#home ul.socials {
+  display: flex;
+  gap: 1rem;
+  list-style: none; /* remove bullets */
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap; /* allows wrapping if needed */
+}
+
+#home ul.socials li {
+  margin: 0;
+  list-style: none; /* make sure dots are gone */
+}
+
+#home ul.socials li a {
+  position: relative;
+  bottom: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 255, 0.5);
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+#home ul.socials li a:hover {
+  background: rgba(138, 43, 226, 0.2);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+}
+
+.portfolio-slider {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.portfolio-slider .slide p{
+  font-size: .8rem;
+}
+.portfolio-slider  .slide {
+  width: 14rem;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  text-shadow: 0 0 5px black;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-slider .slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+.portfolio-slider .slide a {
+  color: white;
+  text-decoration: underline;
+}
+
+.portfolio-slider .slide a:hover {
+  color: #ffffff; 
+}
+
+
+/* Skills Area */
+#skills-talents {
+  margin-top: 1rem;
+  padding: 2rem;
+}
+
+#skills-talents h2 {
+  font-family: 'Montserrat';
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.skills-slider{
+    display: flex;
+    justify-content: space-evenly ;
+}
+.skill-html, .skill-css, .skill-javascript{
+    position: relative;
+    top: .6rem;
+    font-family: 'Poppins', sans-serif;
+    height: 20rem;
+    width: 10rem;
+    border-radius: 12px;
+    padding: 1rem;
+    color: white;
+    text-shadow: 0 0 5px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.5s ease, transform .3s ease
+}
+.skill-icon {
+    position: relative;
+    width: 10rem;
+    height: auto;
+    top: 5rem;
+}
+
+
+.skill-html:hover {
+  background-color: rgb(255, 150, 150);
+  box-shadow: 0 0 25px rgba(211, 144, 144, 0.8);
+  transform: scale(0.3);
+}
+
+.skill-css:hover {
+  background-color: rgb(70, 70, 255);
+  box-shadow: 0 0 25px rgba(42, 42, 212, 0.8);
+  transform: scale(0.3);
+}
+
+.skill-javascript:hover {
+  background-color: rgba(255, 230, 120, 0.98);
+  box-shadow: 0 0 25px rgba(221, 200, 92, 0.8);
+  transform: scale(0.3);
+}
+
+/* Talents Area */
+.talents-slider{
+    display: flex;
+    justify-content: center ;
+}
+.talent-singing{
+    position: relative;
+    top: .7rem;
+    height: 20rem;
+    width: 20rem;
+}
+.talent-sticker {
+  width: 20rem;
+  height: auto;
+  position: absolute;
+  top: 1rem;
+  right: .2rem;
+}
+
+/* Sliders Main */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  flex: 0 0 auto;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
+}
+
+
+
+/* Services Area */
+.services-slider {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.services-slider .slide {
+  height: 18rem;
+  width: 12rem;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  text-shadow: 0 0 5px black;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;         /* Stack text and image vertically */
+  align-items: center;            /* Center horizontally */
+  justify-content: start;         /* Align text to the top */
+  text-align: center;             /* Center the text itself */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-slider .slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+.service-icon {
+    position: relative;
+    top : 2rem;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Contacts Area */
+.contact-section {
+  background-color: rgba(30, 30, 30, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #fff;
+  max-width: 700px; /* wider */
+  margin: 2rem auto;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  text-align: left;
+}
+
+.contact-section h2,
+.contact-section p {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row; /* make items side by side */
+  gap: 2rem; /* space between email and phone */
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap; /* wrap if needed on smaller screens */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.contact-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+
+.contact-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1 1 45%;
+}
+
+.contact-right {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.contact-right h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+#testimonial-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#testimonial-form input,
+#testimonial-form textarea {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#testimonial-form button {
+  padding: 0.5rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+#testimonial-form button:hover {
+  background-color: #45a049;
+}
+
+

@@ -1,0 +1,59 @@
+<portfolio>
+  <home>
+    <name>Christian Gabut</name>
+    <photo>profile.jpg</photo>
+    <intro>- A student from SLSU-HC</intro>
+    <tagline>If there's a hole, there's a goal!</tagline>
+    <location>Tahusan, Hinunangan, Southern Leyte</location>
+    <socials>
+      <facebook>https://www.facebook.com/christian.gabut.2024</facebook>
+      <instagram>https://www.instagram.com/chris_chan041722/</instagram>
+    </socials>
+  </home>
+    <projects>
+    <project>
+        <title>To-Do List System</title>
+        <description> A simple and efficient task management app that lets users add, edit, and delete tasks to stay organized and productive.</description>
+        <tech>HTML, CSS, Bootstrap, Javascript</tech>
+        <link>https://github.com/achlys041722/to-do-list.git</link>
+    </project>
+    <project>
+        <title>PH-Checkers</title>
+        <description>Checkers is a two-player game of diagonal moves and strategic piece captures.</description>
+        <tech>Python</tech>
+        <link>https://github.com/achlys041722/Checkers-Game.git</link>
+    </project>
+    </projects>
+
+  <skills>
+    <skill>HTML</skill>
+    <skill>CSS</skill>
+    <skill>JavaScript</skill>
+  </skills>
+  <talents>
+    <talent>Singing</talent>
+  </talents>
+  <organizations>
+    <org>
+      <name>No Record to be shown</name>
+      <role></role>
+      <years></years>
+    </org>
+  </organizations>
+<services>
+  <service>Web Design</service>
+  <service>Graphic Design</service>
+  <service>Video Editor</service>
+</services>     
+  <testimonials>
+    <testimonial>
+      <name>Juan Dela Cruz</name>
+      <relation>Friend</relation>
+      <message>He's Kind, he probably gives you butterflies</message>
+    </testimonial>
+  </testimonials>
+  <contact>
+    <email>gabutchristian25@gmail.com</email>
+    <phone>09655542880</phone>
+  </contact>
+</portfolio>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Christian's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div id="home">
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills-talents">Skills & Talents</a></li>
+            <li><a href="#organizations">Organizations</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <h1 id="name"></h1>
+    <img class="photo">
+    <p id="intro"></p>
+    <p id="tagline"></p>
+    <p id="location"></p>
+    <ul class="socials">
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+    </ul>
+
+  </div>
+
+     <section id="portfolio" class="section">
+        <div class="portfolio-slider">
+            <div class="slide portfolio-project-1">Project 1</div>
+            <div class="slide portfolio-project-2">Project 2</div>
+        </div>
+    </section>
+
+  <section id="skills-talents">
+        <h2>Skills</h2>
+        <section class="slider skills-slider">
+            <div class="slide skill-html">Skill 1</div>
+            <div class="slide skill-css">Skill 2</div>
+            <div class="slide skill-javascript">Skill 3</div>
+        </section>
+
+        <h2>Talents</h2>
+        <div class="slider talents-slider">
+            <div class="slide talent-singing">Talent 1</div>
+        </div>
+    </section>
+
+
+  <section id="organizations"></section>
+
+  <section id="services" class="section">
+    <div class="slide service-web-design">Web Design</div>
+    <div class="slide service-graphic-design">Grapic Design</div>
+    <div class="slide service-video-editor">Video Editor</div>
+  </section>    
+
+  <div id="testimonials"></div>
+
+<section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <p>If you want to get in touch, feel free to reach out!</p>
+  <section class="contact-info">
+    <section class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <a id="email-link" href="#">Loading...</a>
+    </section>
+    <section class="contact-item">
+      <i class="fas fa-phone"></i>
+      <a id="phone-link" href="#">Loading...</a>
+    </section>
+
+    <div class="contact-right">
+      <h3>Leave a Testimonial</h3>
+      <form id="testimonial-form">
+        <input type="text" id="name" placeholder="Your name" required />
+        <textarea id="comment" placeholder="Your comment" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+</section>
+</section>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
